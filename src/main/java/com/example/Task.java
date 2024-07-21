@@ -1,4 +1,4 @@
-package org.acme;
+package com.example;
 
 import java.util.List;
 
@@ -68,23 +68,19 @@ public class Task {
         this.status = status;
     }
 
-    public static void deleteById(Long id2) {
-        // TODO Auto-generated method stub
+    public static boolean deleteById(Long id2) {
         throw new UnsupportedOperationException("Unimplemented method 'deleteById'");
     }
 
     public void persist() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'persist'");
     }
 
     public static Task findById(Long id2) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'findById'");
     }
 
     public static List<Task> listAll() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'listAll'");
     }
 }
