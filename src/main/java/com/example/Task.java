@@ -1,32 +1,18 @@
 package com.example;
 
-import java.util.List;
-
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
 @Entity
-public class Task {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String title;
-    private String description;
-    private String creationDate;
-    private String dueDate;
-    private String status;
+public class Task extends PanacheEntity {
+
+    public String title;
+    public String description;
+    public String creationDate;
+    public String dueDate;
+    public String status;
 
     // Getters e Setters
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;
@@ -66,21 +52,5 @@ public class Task {
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    public static boolean deleteById(Long id2) {
-        throw new UnsupportedOperationException("Unimplemented method 'deleteById'");
-    }
-
-    public void persist() {
-        throw new UnsupportedOperationException("Unimplemented method 'persist'");
-    }
-
-    public static Task findById(Long id2) {
-        throw new UnsupportedOperationException("Unimplemented method 'findById'");
-    }
-
-    public static List<Task> listAll() {
-        throw new UnsupportedOperationException("Unimplemented method 'listAll'");
     }
 }
